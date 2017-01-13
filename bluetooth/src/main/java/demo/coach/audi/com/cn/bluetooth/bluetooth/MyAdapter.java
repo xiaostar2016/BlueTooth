@@ -1,20 +1,12 @@
 package demo.coach.audi.com.cn.bluetooth.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
-import android.content.Context;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import demo.coach.audi.com.cn.bluetooth.R;
 
 /**
  * Created by ZD_xiao on 2017/1/12.
@@ -49,6 +41,7 @@ public class MyAdapter extends BaseAdapter {
 
         if (convertView == null) {
             textView = new TextView(parent.getContext());
+            textView.setTextSize(22);
 
         } else {
             textView = (TextView) convertView;

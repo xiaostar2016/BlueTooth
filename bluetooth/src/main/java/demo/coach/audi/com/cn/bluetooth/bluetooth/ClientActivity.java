@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -34,7 +34,7 @@ public class ClientActivity extends Activity {
 
     private MyAdapter myAdapter;
     private ListView listView;
-    private LinearLayoutManager layoutManager;
+
 
     private ArrayList<BluetoothDevice> deviceList = new ArrayList<BluetoothDevice>();
 
@@ -104,9 +104,7 @@ public class ClientActivity extends Activity {
         sendEditText = (EditText) findViewById(R.id.clientSendEditText);
         sendBtn = (Button) findViewById(R.id.clientSendMsgBtn);
 
-        //List布局
-        layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+       
 
         myAdapter = new MyAdapter(deviceList);
         listView.setAdapter(myAdapter);
